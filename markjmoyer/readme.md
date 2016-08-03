@@ -13,22 +13,19 @@ Following are dependencies and packages used in developing this website:
 * [Modernizr](http://modernizr.com/) - Detects HTML5 and CSS3 features in the user’s browser
 * [SASS](http://sass-lang.com//) - CSS Pre-Processor
 
-&nbsp;
+##
 
-### CRAFT CMS
+## CRAFT CMS
 
-## Documentation
-* -----------------------------------------------------------------
+# Documentation
 * Installation instructions and much more.
 * [Craft CMS](https://craftcms.com/docs)
 
-## Changelog
------------------------------------------------------------------
+# Changelog
 * Release notes with bug fixes, improvements and additions.
 * [Changelog](https://craftcms.com/changelog)
 
-## Stack Exchange
-* -----------------------------------------------------------------
+# Stack Exchange
 * A great place to ask your Craft questions, meet the awesome Craft community and earn
   mad reputation.
 * [Stack Exchange](https://craftcms.stackexchange.com/)
