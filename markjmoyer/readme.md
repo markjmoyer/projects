@@ -1,9 +1,8 @@
-# MARK J. MOYER: PORTFOLIO WEBSITE
-
+# PORTFOLIO - [Mark J Moyer](http://www.markjmoyer.com)
 
 ## Project Dependencies
 
-Following are the dependencies and packages used in developing this website:
+Following are dependencies and packages used in developing this website:
 
 * [Git](http://git-scm.com/) - Source Code Management
 * [MAMP](http://mamp.info) - Web Server
