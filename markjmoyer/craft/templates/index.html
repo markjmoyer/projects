@@ -1,0 +1,53 @@
+{#
+ # Homepage template
+ # ---------------
+ #
+ # When this template gets loaded, it will be because someone has accessed
+ # http://yoursite.com/ (without any URI). Craft checks to see if you have
+ # a Single section set to be the Homepage (as you do, by default), and
+ # loads the section’s Template (this file). A special ‘entry’ variable
+ # will already be set for you, assigned to the Homepage entry.
+ #
+ # It's worth noting that even if you didn't have a Homepage Single section,
+ # as long as this template remains at craft/templates/index.html, it
+ # would still be the one to get loaded when accessing http://yoursite.com/,
+ # albeit without an ‘entry’ variable already set for you.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+
+<div class="intro-container">
+  <div class="intro-col">
+    <h2>Professional Skill set</h2>
+    <div class="skillsBarWrap">
+      <ul class="skills">
+        <li><h3>HTML5 CSS2/3 LESS/SASS/SCSS/OOCSS</h3><span class="skill_bg"><span class="skillbar" style="width: 100%;"></span></span></li>
+        <li><h3>jQuery &amp; JavaScript</h3><span class="skill_bg"><span class="skillbar" style="width: 75%;"></span></span></li>
+        <li><h3>ASP.NET MVC C#</h3><span class="skill_bg"><span class="skillbar" style="width: 45%;"></span></span></li>
+        <li><h3>PHP/MySQL/Apache</h3><span class="skill_bg"><span class="skillbar" style="width: 70%;"></span></span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="intro-col">
+    <h2>What makes me different?</h2>
+    <p>A ton of things that'll completely bore most of you. So, what to do? Well, I hate to use an old and totally overdone web cliché to make my point, but:</p>
+    <p class="biglink"><a href="/portfolio">Click Here!</a></p>
+  </div>
+</div>
+
+	<h1>{{ entry.title }}</h1>
+
+	{{ entry.body }}
+
+	<h2>Recent News</h2>
+	<ul>
+		{% for entry in craft.entries.section('news').limit(5).find() %}
+			<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+		{% endfor %}
+	</ul>
+{% endblock %}

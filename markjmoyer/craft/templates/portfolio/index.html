@@ -1,0 +1,61 @@
+{#
+ # Portfolio index template
+ # -------------------
+ #
+ # This template is loaded whenever http://example.com/portfolio is
+ # requested, because it is located at portfolio/index.html in your
+ # craft/templates/ folder.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+{% extends "_layout" %}
+{% set title = "Portfolio" %}
+
+{% block content %}
+
+<!-- <h1>Portfolio</h1> -->
+<section class="portfolio">
+    <h2>NASCAR Digital Media</h2>
+    {% for entry in craft.entries.section('nascar').find() %}
+    <div class="portfolio-item">
+        <h3>{{ entry.title }}</h3>
+        {% for image in entry.nascarProjectImage %}
+        <a href="{{ entry.url }}"><img src="{{ image.url }}"></a>
+        {% endfor %}
+        <p><strong>Role:</strong> {{ entry.role }}</p>
+        <p><strong>Technologies:</strong> {{ entry.technologies }}</p>
+    </div>
+    {% endfor %}
+</section>
+
+    <section class="portfolio">
+        <h2>BFG Communications</h2>
+        {% for entry in craft.entries.section('bfg').find() %}
+        <div class="portfolio-item">
+            <h3>{{ entry.title }}</h3>
+            {% for image in entry.bfgProjectImage %}
+            <a href="{{ entry.url }}"><img src="{{ image.url }}"></a>
+            {% endfor %}
+            <p><strong>Role:</strong> {{ entry.role }}</p>
+            <p><strong>Technologies:</strong> {{ entry.technologies }}</p>
+        </div>
+        {% endfor %}
+    </section>
+
+    <section class="portfolio">
+        <h2>Private Contracts</h2>
+        {% for entry in craft.entries.section('freelance').find() %}
+        <div class="portfolio-item">
+            <h3>{{ entry.title }}</h3>
+            {% for image in entry.freelanceProjectImage %}
+            <a href="{{ entry.url }}"><img src="{{ image.url }}"></a>
+            {% endfor %}
+            <p><strong>Client:</strong> {{ entry.client }}</p>
+            <p><strong>Technologies:</strong> {{ entry.technologies }}</p>
+        </div>
+        {% endfor %}
+    </section>
+    <div class="cd-top"><a href="#0" title="Back to Top"><span></span></a></div>
+{% endblock %}

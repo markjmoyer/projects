@@ -1,0 +1,26 @@
+
+// General layout overrides
+
+.#{$title} {
+  // color: $black;
+}
+
+
+
+// Tablet-specific layout overrides
+
+.tablet {
+  .#{$title} {
+    // color: $black;
+  }
+}
+
+
+
+// Mobile-specific layout overrides
+
+.mobile {
+  .#{$title} {
+    // color: $black;
+  }
+}

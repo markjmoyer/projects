@@ -1,0 +1,63 @@
+// styles for round circular content areas on front page
+
+.#{$title} {
+
+  .orb-container {
+    height: auto;
+    margin: 0 auto 50px;
+    overflow: hidden;
+    width: 900px;
+
+    .orb {
+
+      border: 15px solid $white;
+      border-radius: 50%;
+      float: left;
+      height: 240px;
+      margin: 0 15px;
+      width: 240px;
+    }
+
+    .orb-inner {
+      background-color: $black;
+      border-radius: 50%;
+      height: 220px;
+      margin: 10px;
+      width: 220px;
+
+      & h3 {
+        color: $grey;
+        font-family: $font-arial;
+        font-size: 26px;
+        margin: 0;
+        padding-top: 40px;
+        text-align: center;
+      }
+
+      & ul {
+        color: $grey;
+        list-style-type: square;
+        margin-left: 37px;
+
+        & li {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+
+      .readmore {
+        margin: 25px auto;
+        width: 110px;
+
+        & a {
+          border-radius: 20px;
+          color: $white;
+          display: block;
+          font-size: 12px;
+          padding: 6px 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

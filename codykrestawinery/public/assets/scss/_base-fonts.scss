@@ -1,0 +1,71 @@
+
+// *******************************************************************************
+// * DO NOT MAKE PROJECT-SPECIFIC MODIFICATIONS TO THIS FILE.
+// *******************************************************************************
+
+//@font-face {
+//  font-family: 'FontAwesome';
+//  font-style: normal;
+//  font-weight: normal;
+//  src: url('../fonts/Font-Awesome/fontawesome-webfont.svg') format('svg');
+//  src: url('../fonts/Font-Awesome/fontawesome-webfont.eot');
+//  src: url('../fonts/Font-Awesome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+//			 url('../fonts/Font-Awesome/fontawesome-webfont.woff') format('woff'),
+//       url('../fonts/Font-Awesome/fontawesome-webfont.woff2') format('woff2'),
+//       url('../fonts/Font-Awesome/fontawesome-webfont.ttf') format('truetype');
+//}
+
+@font-face {
+  font-family: 'NeoSans-Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Neo-Sans-Italic/NeoSans-Italic.svg') format('svg');
+  src: url('../fonts/Neo-Sans-Italic/NeoSans-Italic.eot');
+  src: url('../fonts/Neo-Sans-Italic/NeoSans-Italic.eot?#iefix') format('embedded-opentype'),
+		 	 url('../fonts/Neo-Sans-Italic/NeoSans-Italic.woff') format('woff'),
+       url('../fonts/Neo-Sans-Italic/NeoSans-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Blades';
+  font-style: normal;
+  font-weight: normal;
+  src:  url('../fonts/Blades/BLADES.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: normal;
+  src:  url('../fonts/Arial/Arial.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Arial-Black';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Arial-Black/Arial-Black.svg') format('svg');
+  src: url('../fonts/Arial-Black/Arial-Black.eot');
+  src: url('../fonts/Arial-Black/Arial-Black.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Arial-Black/Arial-Black.woff') format('woff'),
+       url('../fonts/Arial-Black/Arial-Black.ttf') format('truetype');
+}
+
+
+
+// Font Variables
+$font-awesome: 'FontAwesome';
+$font-blades: 'Blades';
+$font-arial: 'Arial';
+$font-arial-black: 'Arial-Black';
+
+$font-helvetica: 'Helvetica', 'Arial', sans-serif;
+$font-default: 'Arial', 'Helvetica', sans-serif;
+
+// Font Classes
+.font-blades { font-family: $font-blades; }
+.font-arial { font-family: $font-arial; }
+.font-arial-black { font-family: $font-arial-black; }
+
+.font-helvetica { font-family: $font-helvetica; }
+.font-default { font-family: $font-default; }

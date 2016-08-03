@@ -1,0 +1,56 @@
+
+// *******************************************************************************
+// * DO NOT MAKE PROJECT-SPECIFIC MODIFICATIONS TO THIS FILE.
+// *******************************************************************************
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-arial;
+  letter-spacing: .005px;
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 32px;
+ }
+
+h2 {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+h3 {
+  font-family: $font-arial;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+h4 {
+  font-family: $font-arial;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+h5 {
+  color: $gold;
+  font-family: $font-arial;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+h6 {
+  font-family: $font-arial;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+p {
+  font-family: $font-default;
+  font-size: 14px;
+  line-height: 24px;
+}

@@ -1,0 +1,96 @@
+.#{$title} {
+  nav {
+    display: block;
+
+    ul {
+      list-style-type: none;
+      margin: 0 0 40px;
+      padding: 20px 0;
+      position: relative;
+    }
+
+    li {
+      background-color: $white;
+      border: 1px solid $grey-l2;
+      border-radius: 4px;
+      float: left;
+      font-size: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding: 0;
+     }
+
+    a {
+      color: $blue;
+      display: inline-block;
+      line-height: 22px;
+      padding: 5px 20px;
+      text-decoration: none;
+
+      &:hover,
+      &:active {
+        color: $lt-blue;
+        cursor: pointer;
+      }
+
+      i {
+        color: $blue;
+        font-size: 14px;
+      }
+    }
+
+    ul.dropdown-menu {
+      background-color: none;
+      border: 1px solid $grey-l2;
+      border-radius: 4px;
+      box-shadow: 3px 3px 15px -8px $black;
+      left: 283px;
+      padding: 0;
+      position: absolute;
+      top: 53px;
+      width: 240px;
+
+      & li {
+        border: 0;
+        border-radius: 0;
+        float: none;
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+      }
+
+      & a {
+        display: block;
+      }
+
+      & .fallback { display: none; }
+    }
+
+
+    & :hover .fallback { display: block; }
+  }
+}
+
+// Tablet-specific layout
+.tablet {
+
+  .#{$title} {
+
+    .more {
+      margin: 14px 37px 0 0;
+    }
+  }
+}
+
+
+
+// Mobile-specific layout
+.mobile {
+
+  .#{$title} {
+
+    .more {
+      margin: 12px 10px 0 0;
+    }
+  }
+}

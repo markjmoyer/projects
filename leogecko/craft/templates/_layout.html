@@ -1,0 +1,82 @@
+{#
+ # Main Layout template
+ # ---------------
+ #
+ # This template defines the site’s global layout. It can be
+ # “extended” by other templates thereby filling in the gaps.
+ #
+ # See Twig’s Template Inheritance documentation for more details:
+ # http://twig.sensiolabs.org/doc/templates.html#template-inheritance
+ #}
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+	<link rel="home" href="{{ siteUrl }}" />
+
+  {% includeCssFile "/assets/css/leogecko.css" %}
+  {% includeCssFile "/assets/css/font-awesome.css" %}
+
+  {% includeJsFile "/assets/js/vendor/jquery.min.js" %}
+  {% includeJsFile "/assets/js/vendor/jquery.dotdotdot.min.js" %}
+  {% includeJsFile "/assets/js/vendor/jquery.mCustomScrollbar.min.js" %}
+  {% includeJsFile "/assets/js/vendor/restive.min.js" %}
+  {% includeJsFile "/assets/js/vendor/modernizr.min.js" %}
+  {% includeJsFile "/assets/js/state.js" %}
+  {% includeJsFile "/assets/js/vendor/q.js" %}
+  {% includeJsFile "/assets/js/leogecko.js" %}
+</head>
+
+<body class="leogecko">
+
+	<header class="header">
+    <div class="container">
+      <div class="logo">
+        <h1><a href="{{ siteUrl }}">{{ siteName }}</a></h1>
+        <p>those funny little reptiles!</p>
+      </div>
+    </div>
+	</header>
+
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="{{ siteUrl }}" class="active"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; home</a></li>
+        <li><a href="{{ url('about') }}" {% if craft.request.firstSegment == 'about' %}class="active"{% endif %}><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp; about</a></li>
+        <li class="dropdown"><a href="{{ url('products') }}" {% if craft.request.firstSegment == 'products' %}class="active"{% endif %}><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp; products</a>
+            <ul class="dropdown-menu fallback">
+              <li><a href="{{ url('/articles/leopard-gecko-food') }}" {% if craft.request.firstSegment == 'food' %}class="active"{% endif %}>Leopard Gecko Food</a></li>
+              <li><a href="{{ url('/articles/habitat-and-environment') }}" {% if craft.request.firstSegment == 'habitat' %}class="active"{% endif %}>Leopard Gecko Habitat</a></li>
+              <li><a href="{{ url('/articles/leopard-gecko-safety') }}" {% if craft.request.firstSegment == 'safety' %}class="active"{% endif %}>Leopard Gecko Safety</a></li>
+              <li><a href="{{ url('/articles/caring-for-leopard-geckos') }}" {% if craft.request.firstSegment == 'books' %}class="active"{% endif %}>Leopard Gecko Care</a></li>
+              <li><a href="{{ url('/articles/leopard-gecko-breeding') }}" {% if craft.request.firstSegment == 'breeding' %}class="active"{% endif %}>Leopard Gecko Breeding</a></li>
+              <li><a href="{{ url('/articles/technology-for-leopard-geckos') }}" {% if craft.request.firstSegment == 'technology' %}class="active"{% endif %}>Leopard Gecko Technology</a></li>
+              <li><a href="{{ url('/articles/leopard-gecko-books') }}" {% if craft.request.firstSegment == 'books' %}class="active"{% endif %}>Leopard Gecko Books</a></li>
+            </ul>
+        </li>
+        <li><a href="{{ url('news') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}><i class="fa fa-newspaper-o" aria-hidden="true"></i>&nbsp; news</a></li>
+        <li><a href="{{ url('blog') }}" {% if craft.request.firstSegment == 'blog' %}class="active"{% endif %}><i class="fa fa-rss-square" aria-hidden="true"></i>&nbsp; blog</a></li>
+        <li><a href="{{ url('gallery') }}" {% if craft.request.firstSegment == 'gallery' %}class="active"{% endif %}><i class="fa fa-camera" aria-hidden="true"></i>&nbsp; gallery</a></li>
+      </ul>
+    </nav>
+
+
+
+  	<main class="content" role="main">
+  		{% block content %}
+  			<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
+  			<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
+  		{% endblock %}
+  	</main>
+
+    
+
+  	<footer class="footer">
+  		&copy; {{ now.year }} {{ craft.request.serverName | ucfirst }}. All Rights Reserved  •  I built it with <a href="http://craftcms.com" target="_blank">Craft CMS!</a>
+  	</footer>
+	</div>
+</body>
+</html>

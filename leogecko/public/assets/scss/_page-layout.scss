@@ -1,0 +1,136 @@
+
+// * Layout customizations specific to this project should be made in this file.
+// * Do not include classes for specific components here. This file should only
+// * contain layout overrides to grids, rows, columns, containers, etc.
+
+
+// General layout
+
+body {
+  background: $grey-l1;
+  background-image: url('../../assets/images/leopardgecko.png');
+  background-position: top right;
+  background-repeat: no-repeat;
+  font-family: $font-droidsans-regular;
+  margin: 0 0 50px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1220px;
+  min-width: 320px;
+  overflow: hidden;
+}
+
+.content {
+  display: block;
+  margin-bottom: 30px;
+  overflow: hidden;
+  padding: 15px 0;
+
+  h1 {
+    color: $grey;
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  a {
+    color: $orange;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  img {
+    border: 10px solid $grey-l2;
+  }
+
+  .content-image img {
+    margin-top: 20px;
+    width: 810px;
+  }
+
+  article {
+    border-right: 3px solid $white;
+    float: left;
+    margin: 10px 25px 0 0;
+    padding: 0 20px 0 0;
+    width: 69%;
+
+    h1 {
+      margin-bottom: 22px;
+      margin-top: 12px;
+    }
+  }
+}
+
+.#{$title} {
+  color: $black;
+  font-family: $font-default;
+  font-size: 100%;
+  margin: 0 0 20px;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $grey;
+    font-family: $font-arial;
+  }
+
+  section {
+    margin: 0;
+  }
+
+  a {
+    color: $blue;
+  }
+
+  .col {
+    float: left;
+    width: 32%;
+
+    ul {
+      list-style-type: none;
+      padding-left: 35px;
+    }
+
+    &:nth-child(2) {
+      border-left: 3px solid $white;
+      border-right: 3px solid $white;
+      margin: 0 25px;
+      padding: 0 25px;
+      width: 30%;
+    }
+
+    &:nth-child(3) {
+      padding-left: 10px;
+      width: 25%;
+    }
+  }
+}
+
+
+// Tablet-specific layout
+.tablet {
+  .#{$title} {
+
+    .more {
+      margin: 14px 37px 0 0;
+    }
+  }
+}
+
+// Mobile-specific layout
+.mobile {
+  .#{$title} {
+
+    .more {
+      margin: 12px 10px 0 0;
+    }
+  }
+}

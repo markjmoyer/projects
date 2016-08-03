@@ -1,0 +1,41 @@
+
+.menu-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1220px;
+  min-width: 320px;
+  overflow: hidden;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  margin: 0;
+  text-align: center;
+}
+
+
+header a {
+  color: #fff;
+}
+
+header:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+header a {
+  text-decoration: none;
+}
+
+.tablet {
+
+}
+
+.mobile {
+
+}

@@ -1,0 +1,55 @@
+section.portfolio {
+
+  h2 {
+    color: $red;
+    font-family: $font-droidsans-regular;
+    font-size: 18px;
+    font-weight: 100;
+    margin-left: .5000%;
+    text-transform: uppercase;
+  }
+
+  .portfolio-item {
+    background-color: $white;
+    border: 1px solid $grey-l2;
+    border-radius: 4px;
+    color: $grey;
+    display: inline-block;
+    margin: .7% .5%;
+    padding: 0 15px 15px;
+    width: 29.485%;
+
+    h3 {
+      font-family: $font-droidsans-regular;
+      font-size: 15px;
+    }
+
+    a {
+      display: block;
+    }
+
+    img {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 22px;
+      margin: 0;
+    }
+  }
+}
+
+.tablet {
+  section {
+    .portfolio {
+      margin: 0 auto;
+      width: 768px;
+    }
+
+    .portfolio-item {
+      width: 342px;
+    }
+  }
+}

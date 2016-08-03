@@ -1,0 +1,25 @@
+{#
+ # Orbs entry template
+ # -------------------
+ #
+ # This template gets loaded whenever a Orbs entry’s URL is
+ # requested. That’s because the Orbs section’s Template setting is
+ # set to “orbs/_entry”, the path to this template.
+ #
+ # When this template is loaded, it will already have an ‘entry’
+ # variable, set to the requested Orbs entry.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+	<article>
+		<h1>{{ entry.orbheading }}</h1>
+    <p>{{ entry.orbStory }}</p>
+		<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
+		{{ entry.body }}
+	</article>
+{% endblock %}

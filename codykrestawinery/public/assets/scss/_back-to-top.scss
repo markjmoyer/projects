@@ -1,0 +1,60 @@
+.#{$title} {
+
+  .cd-top {
+    bottom: 50px;
+    position: fixed;
+    right: 30px;
+
+    a {
+      display: block;
+      opacity: .3;
+      text-decoration: none;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    span {
+      -webkit-transition: .5s;
+      -moz-transition: .5s;
+      transition: .5s;
+      border-radius: 5px;
+      color: $black;
+      font-family: 'FontAwesome';
+      font-size: 20px;
+      padding: 4px;
+      text-align: center;
+      border: 3px solid $black;
+
+      &::before {
+        content: '\f077';
+      }
+
+      &:hover {
+        background-color: $grey-d1;
+        color: $white;
+      }
+    }
+
+    & .cd-is-visible,
+    & .cd-fade-out,
+    & .no-touch .cd-top:hover {
+      -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+      -moz-transition: opacity .3s 0s, visibility 0s 0s;
+      transition: opacity .3s 0s, visibility 0s 0s;
+  }
+
+    &.cd-is-visible {
+      // the button becomes visible
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &.cd-fade-out {
+      // if the user keeps scrolling down, the button is out of focus and becomes less visible
+      opacity: .5;
+    }
+  }
+
+}

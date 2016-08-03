@@ -1,0 +1,122 @@
+article {
+
+  h4 {
+    color: $red;
+    font-family: $font-droidsans-bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    padding-bottom: 0;
+    padding-left: 25px;
+
+    li {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+
+  .experience {
+    margin-bottom: 30px;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul + ul {
+      padding-left: 20px;
+
+      li {
+        list-style: square;
+      }
+    }
+
+    a {
+      display: inline-block;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: -25px;
+        width: 130px;
+      }
+    }
+  }
+
+  .experience-bfg {
+    margin-bottom: 30px;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul + ul {
+      padding-left: 20px;
+
+      li {
+        list-style: square;
+      }
+    }
+
+    a {
+      display: inline-block;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: -37px;
+        width: 85px;
+      }
+    }
+  }
+
+  .experience-freelance {
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul + ul {
+      padding-left: 20px;
+
+      li {
+        list-style: square;
+      }
+    }
+  }
+
+  .awards {
+    p {
+      margin-bottom: 0;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 5px;
+      padding-left: 10px;
+    }
+  }
+
+  .education {
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      margin-top: 5px;
+      padding-left: 10px;
+
+      li {
+        list-style: none;
+      }
+    }
+  }
+}

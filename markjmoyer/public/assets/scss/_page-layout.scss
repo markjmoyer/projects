@@ -1,0 +1,119 @@
+
+// * Layout customizations specific to this project should be made in this file.
+// * Do not include classes for specific components here. This file should only
+// * contain layout overrides to grids, rows, columns, containers, etc.
+
+
+// General layout
+
+body {
+  background-image: url('../../assets/images/threads.jpg');
+  background-position: 0 0;
+  background-repeat: repeat;
+  font-family: $font-droidsans-regular;
+  margin: 0 0 50px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1220px;
+  min-width: 320px;
+  overflow: hidden;
+}
+
+.cd-top {
+  bottom: 50px;
+  position: fixed;
+  right: 30px;
+
+  a {
+    display: block;
+    opacity: .3;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  span {
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    transition: .5s;
+    border-radius: 5px;
+    color: $black;
+    font-family: 'FontAwesome';
+    font-size: 20px;
+    padding: 4px;
+    text-align: center;
+    border: 3px solid $black;
+
+    &::before {
+      content: '\f077';
+    }
+
+    &:hover {
+      background-color: $grey-d1;
+      color: $white;
+    }
+  }
+
+  & .cd-is-visible,
+  & .cd-fade-out,
+  & .no-touch .cd-top:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+}
+
+  &.cd-is-visible {
+    // the button becomes visible
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &.cd-fade-out {
+    // if the user keeps scrolling down, the button is out of focus and becomes less visible
+    opacity: .5;
+  }
+}
+
+.#{$title} {
+  color: $black;
+  font-family: $font-default;
+  font-size: 100%;
+  margin: 20px 0;
+
+  section {
+    margin: 0;
+  }
+
+  a {
+    color: $blue;
+  }
+}
+
+
+// Tablet-specific layout
+.tablet {
+
+  .#{$title} {
+
+    .more {
+      margin: 14px 37px 0 0;
+    }
+  }
+}
+
+// Mobile-specific layout
+.mobile {
+
+  .#{$title} {
+
+    .more {
+      margin: 12px 10px 0 0;
+    }
+
+  }
+
+}

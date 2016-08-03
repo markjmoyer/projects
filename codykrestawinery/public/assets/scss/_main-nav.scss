@@ -1,0 +1,147 @@
+// main-navigation styles
+
+.mainMenu nav ul {
+  margin: 0;
+  list-style-type: none;
+  overflow: hidden;
+  padding: 0;
+}
+.mainMenu nav ul li {
+  float: left;
+  margin: 0 1px;
+  background-image: url('../../assets/images/patternBG20.png');
+  background-position: 0 -2px;
+  background-repeat: repeat;
+  background-color: #8c9b3a;
+  border-radius: 0 0 4px 4px;
+  box-shadow: inset 0px 0px 80px -30px #000;
+}
+
+.mainMenu nav ul li:hover {
+  background-image: none;
+  box-shadow: none;
+}
+
+.mainMenu nav ul li a span {
+  background-image: url('../../assets/images/iconsprite.png');
+  background-repeat: no-repeat;
+  //border-bottom: 1px solid $white;
+  display: block;
+  margin: 0 auto 10px;
+  width: 47px;
+  height: 25px;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+.ourHome span {  background-position: 5px 5px; }
+.ourWine span {  background-position: -47px 5px; }
+.ourVineyard span {  background-position: -95px 5px; }
+.ourTastingRoom span {  background-position: -142px 5px; }
+.ourStory span { background-position: -190px 5px; }
+
+.mainMenu nav ul li a {
+  color: $red;
+  cursor: pointer;
+  display: block;
+  margin-top: 4px;
+  line-height: 22px;
+  text-align: center;
+  padding: 0 20px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 202px;
+}
+
+.mainMenu nav ul li a:hover {
+  color: #b70000;
+
+}
+
+.mainMenu nav ul li a.active {
+  cursor: default;
+} // end main nav
+
+// begin the hidden main menu
+.hiddenMenu {
+  background-image: url('../../assets/images/pattern-overlay.png');
+  background-position: 0 0;
+  background-repeat: repeat;
+  display: none;
+  height: 330px;
+  overflow: hidden;
+
+  .menuColumn {
+    float: left;
+    padding: 10px 15px;
+    width: 213px;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    p {
+      color: $white;
+      line-height: 18px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      font-size: 15px;
+      padding: 4px 0;
+      text-transform: uppercase;
+    }
+
+    a {
+      color: #8c9b3a;
+      display: block;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #dffe89;
+    }
+  }
+}
+
+.closeMenu {
+  //background-image: url('../../assets/images/closeBtnBG.png');
+  //background-position: 0 0;
+  //background-repeat: no-repeat;
+  margin: 0 auto;
+  position: absolute;
+  top: 9px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  width: 245px;
+  height: 23px;
+
+  i {
+    color: $red;
+    cursor: pointer;
+    font-size: 30px;
+    text-shadow: 1px 1px #000;
+
+    &:hover {
+      color: #8c9b3a;
+
+    }
+  }
+}
+
+.tablet {
+
+}
+
+.mobile {
+
+}

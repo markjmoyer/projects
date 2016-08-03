@@ -1,0 +1,31 @@
+.#{$title} {
+  .excerpt {
+    height: 60px;
+    margin-bottom: 20px;
+    width: 360px;
+
+    & p {
+      margin-top: 5px;
+    }
+
+    & a {
+      color: $grey;
+      text-decoration: none;
+
+      &:hover {
+        color: $pink;
+      }
+    }
+  }
+
+  .news-portal {
+    position: relative;
+    height: 300px;
+}
+    ul {
+    //  height: 340px;
+    //  width: 380px;
+    }
+
+
+}

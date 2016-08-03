@@ -1,0 +1,142 @@
+.contact-modal {
+  background-color: $white;
+  bottom: 0;
+  height: 520px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 150px;
+  margin: 0 auto;
+  width: 480px;
+  box-shadow: 0px 0px 30px #000;
+}
+
+.contact-close {
+  cursor: pointer;
+  padding: 16px;
+  position: relative;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  }
+
+.contact-close > a.close {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 55px;
+  height: 55px;
+  -webkit-transition: all .9s cubic-bezier(.18,1,.21,1);
+  -moz-transition: all .9s cubic-bezier(.18,1,.21,1);
+  transition: all .9s cubic-bezier(.18,1,.21,1);
+
+    &::before,
+    &::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #9f8f68;
+    }
+}
+
+.contact-close > .close::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+  .contact-close > .close::after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+   }
+
+.contact-close > .spin-close {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+
+.content {
+
+  .contact-form-container {
+    margin: 0 auto;
+    width: 320px;
+
+    .errors {
+      background-color: $grey-l1;
+      list-style: none;
+      padding: 5px 10px;
+      text-align: center;
+    }
+
+    & h1 {
+      color: $red;
+      font-size: 22px;
+    }
+
+    form {
+      & h3 {
+        margin-bottom: 0;
+        }
+
+      & label {
+        color: $grey;
+        font-family: $font-droidsans-regular;
+        font-size: 14px;
+      }
+
+      & input {
+        font-size: 16px;
+        height: 25px;
+        padding-left: 10px;
+        width: 310px;
+      }
+
+      & textarea {
+        border: 1px solid $grey-l2;
+        font-size: 16px;
+        padding: 5px 10px;
+        width: 300px;
+      }
+
+      .submit {
+        cursor: pointer;
+        height: 35px;
+        line-height: 28px;
+        margin: 15px 0 50px;
+        text-align: center;
+        width: 120px;
+      }
+    }
+  }
+  button + div {
+      padding: 25px 0;
+    border: 1px solid #7c0000;
+    text-align: center;
+    margin: 20px 0;
+    }
+}
+
+p {
+  .center {
+    color: $red;
+    font-size: 28px;
+    line-height: 34px;
+    padding: 100px 0 300px;
+    text-align: center;
+  }
+}

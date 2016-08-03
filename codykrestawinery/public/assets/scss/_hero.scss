@@ -1,0 +1,49 @@
+.hero-wrapper {
+  width: 100%;
+  overflow: hidden;
+
+  .hero {
+    float: left;
+    width: 50%;
+  }
+
+  figure {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 50%;
+  }
+
+  figcaption {
+    font-family: $font-arial-black;
+    font-size: 45px;
+    line-height: 50px;
+    position: absolute;
+    bottom: 0;
+    padding: 30px;
+    text-transform: uppercase;
+    color: #fff;
+    width: 300px;
+  }
+
+  figure.sub-hero {
+
+    float: left;
+  //  width: 50%;
+    height: 200px;
+
+    img {
+      border: 1px solid #fff;
+    }
+
+    figcaption {
+      font-family: $font-arial;
+      font-size: 18px;
+      padding: 15px;
+      text-align: left;
+      line-height: 22px;
+      width: 220px;
+    }
+  }
+
+}

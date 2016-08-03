@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+	<link rel="home" href="{{ siteUrl }}" />
+  {% includeCssFile "/assets/css/mjmoyer.css" %}
+
+	{% includeJsFile "/assets/js/vendor/jquery.min.js" %}
+	{% includeJsFile "/assets/js/vendor/restive.min.js" %}
+	{% includeJsFile "/assets/js/vendor/modernizr.min.js" %}
+	{% includeJsFile "/assets/js/state.js" %}
+	{% includeJsFile "/assets/js/vendor/q.js" %}
+	{% includeJsFile "/assets/js/mjmoyer.js" %}
+
+</head>
+
+<body>
+  <div class="full-width-container">
+    <header class="header">
+      <div class="logo"><a href="{{ siteUrl }}"></a></div>
+      <nav>
+        <ul>
+          <li><a href="{{ url('news') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>News</a></li>
+          <li><a href="{{ url('portfolio') }}" {% if craft.request.firstSegment == 'portfolio' %}class="active"{% endif %}>Portfolio</a></li>
+          <li><a href="{{ url('resume') }}" {% if craft.request.firstSegment == 'resume' %}class="active"{% endif %}>Resume</a></li>
+          <li><a href="{{ url('contact') }}" {% if craft.request.firstSegment == 'contact' %}class="active"{% endif %}>Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  	<div class="container">
+  		<p class="center">Got it!<br />I'll get back to you soon, {{ craft.request.getQuery('from') }}!</p>
+		</div>
+  <footer class="footer">
+    &copy; {{ now.year }} &nbsp;|&nbsp; I built it with <a href="http://craftcms.com" target="_blank">Craft CMS</a>
+  </footer>
+</body>

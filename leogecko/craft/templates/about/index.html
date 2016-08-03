@@ -1,0 +1,54 @@
+{#
+ # About index template
+ # -------------------
+ #
+ # This template is loaded whenever http://example.com/about is
+ # requested, because it is located at about/index.html in your
+ # craft/templates/ folder.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+{% extends "_layout" %}
+{% set title = "About" %}
+
+{% block content %}
+
+	{% for entry in craft.entries.section('about').find() %}
+
+		<article>
+
+      <h1>About us and our colony</h1>
+      {% for image in entry.contentImage %}
+        <div class="content-image"><img src="{{ image.url }}"></div>
+      {% endfor %}
+			{{ entry.body.getPage(1) }}
+
+      <div class="ad-unit">
+        <script type="text/javascript">
+          amzn_assoc_placement = "adunit0";
+          amzn_assoc_search_bar = "false";
+          amzn_assoc_tracking_id = "leogeckos-20";
+          amzn_assoc_ad_mode = "manual";
+          amzn_assoc_ad_type = "smart";
+          amzn_assoc_marketplace = "amazon";
+          amzn_assoc_region = "US";
+          amzn_assoc_title = "My Amazon Picks";
+          amzn_assoc_linkid = "3916f64c77007f72e32c3284bacda235";
+          amzn_assoc_asins = "B0145O6C0S,B004XNMGOS,B013DJWDA4,B00X9T8TKW";
+          </script>
+        <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
+      </div>
+		</article>
+    <aside>
+      <h2>The Gang</h2>
+      {% for entry in craft.entries.section('aboutSidebar').find() %}
+      <h3>{{ entry.geckoName  }}</h3>
+      {% for image in entry.geckoImage %}
+        <img class="sidebar-photo" src="{{ image.url }}">
+      {% endfor %}
+      {% endfor %}
+    </aside>
+	{% endfor %}
+{% endblock %}

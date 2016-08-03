@@ -1,0 +1,185 @@
+{#
+ # Layout template
+ # ---------------
+ #
+ # This template defines your site’s global layout. It can be
+ # “extended” by other templates to fill in the gaps.
+ #
+ # See Twig’s Template Inheritance documentation for more details:
+ # http://twig.sensiolabs.org/doc/templates.html#template-inheritance
+ #}
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+	<link rel="home" href="{{ siteUrl }}">
+
+  {% includeCssFile "/assets/css/font-awesome.css" %}
+  {% includeCssFile "/assets/css/ckwinery.css" %}
+
+  {% includeJsFile "/assets/js/vendor/jquery.min.js" %}
+  {% includeJsFile "/assets/js/vendor/restive.min.js" %}
+  {% includeJsFile "/assets/js/vendor/modernizr.min.js" %}
+  {% includeJsFile "/assets/js/state.js" %}
+  {% includeJsFile "/assets/js/vendor/q.js" %}
+  {% includeJsFile "/assets/js/ckwinery.js" %}
+
+</head>
+
+<body>
+<div class="overlay">&nbsp;</div>
+		<div class="mainMenu">
+      <div class="menu-container">
+			<nav>
+				<ul>
+          <li class="ourHome"><a href="#"><span></span>Our Home</a></li>
+          <li class="ourWine"><a href="#" {% if craft.request.firstSegment == 'wine' %}class="active"{% endif %}><span></span>Our Wine</a></li>
+					<li class="ourVineyard"><a href="{{ url('news') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}><span></span>Our Vineyard</a></li>
+          <li class="ourTastingRoom"><a href="{{ url('news') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}><span></span>Our Tasting Room</a></li>
+          <li class="ourStory"><a href="{{ url('about') }}" {% if craft.request.firstSegment == 'about' %}class="active"{% endif %}><span></span>Our Story</a></li>
+        </ul>
+			</nav><!-- end main-menu -->
+    </div>
+    </div>
+    <!-- <h1><a href="{{ siteUrl }}">{{ siteName }}</a></h1> -->
+
+    <div class="container">
+      <div class="hiddenMenu">
+        <nav>
+        <div class="menuColumn">
+          <div class="ourHome">
+            <p>Aeneanero sit amet quam egestas semp ultricies mi vitae est. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.</p>
+            <ul>
+              <li><a href="{{ siteUrl }}">Home</a></li>
+              <li><a href="">Our Vision</a></li>
+              <li><a href="">Our Beginnings</a></li>
+              <li><a href="">Our Growth</a></li>
+              <li><a href="">Our Future</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="menuColumn">
+          <div class="ourWine">
+            <p>Aeneanero sit amet quam egestas semp ultricies mi vitae est. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.</p>
+            <ul>
+              <li><a href="{{ url('wine') }}">The Winery</a></li>
+              <li><a href="">Red Wine</a></li>
+              <li><a href="">White Wine</a></li>
+              <li><a href="">Bragging Rights</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="menuColumn">
+          <div class="ourVineyard">
+            <p>Aeneanero sit amet quam egestas semp ultricies mi vitae est. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.</p>
+            <ul>
+              <li><a href="">Visiting</a></li>
+              <li><a href="">Directions</a></li>
+              <li><a href="">Gallery</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="menuColumn">
+          <div class="ourTastingRoom">
+            <p>Aeneanero sit amet quam egestas semp ultricies mi vitae est. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.</p>
+            <ul>
+              <li><a href="">Events</a></li>
+              <li><a href="">Scheduling</a></li>
+              <li><a href="">Purchasing</a></li>
+              <li><a href="">Shop</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="menuColumn">
+          <div class="ourStory">
+            <p>Aeneanero sit amet quam egestas semp ultricies mi vitae est. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.</p>
+            <ul>
+              <li><a href="">our beginnings</a></li>
+              <li><a href="">our dogs</a></li>
+              <li><a href="">the people</a></li>
+              <li><a href="">our friends</a></li>
+              <li><a href="">our future</a></li>
+            </ul>
+          </div>
+        </div>
+        </nav>
+      </div>
+      <header>
+        <div class="closeMenu">
+          <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+        </div>
+        <div class="logo">
+          <a href=""><img src="assets/images/logo.png" alt=""></a>
+        </div>
+        <div class="headerNav">
+          <nav>
+            <ul>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Directions</a></li>
+              <li><a href="#">Newsletter Signup</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="searchForm">
+          <form action="#" method="get">
+          <span class="fa fa-search"></span>
+          <input type="text" id="searchInput" name="searchInput">
+        </form>
+        </div>
+      </header>
+      <div class="hero-wrapper">
+        <div class="hero">
+          <figure>
+            <img src="assets/images/hero.jpg">
+            <figcaption>
+              The Tasting Room is Open
+            </figcaption>
+          </figure>
+        </div>
+        <div class="hero">
+          <figure class="sub-hero">
+            <img src="assets/images/sub-hero1.jpg">
+            <figcaption>The New Building Has Been Completed</figcaption>
+          </figure>
+          <figure class="sub-hero">
+            <img src="assets/images/sub-hero2.jpg">
+            <figcaption>The Patio, Waterfalls and Bales of Hay </figcaption>
+          </figure>
+          <figure class="sub-hero">
+            <img src="assets/images/sub-hero3.jpg">
+            <figcaption>A View of The Vineyard</figcaption>
+          </figure>
+          <figure class="sub-hero">
+            <img src="assets/images/sub-hero4.jpg">
+            <figcaption>Colby</figcaption>
+          </figure>
+        </div>
+
+      </div>
+
+  		<main class="content" role="main">
+  			{% block content %}
+  				<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
+  				<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
+  			{% endblock %}
+  		</main>
+
+		<footer class="footer">
+			Copyright {{ now.year }} {{ craft.request.serverName | ucfirst }}. All rights reserved  •  Built with <a href="http://craftcms.com">Craft</a>
+		</footer>
+	</div>
+
+<div class="ageVerifyModal">
+<div class="modal-logo"><img src="assets/images/logo.png"></div>
+<p>It's encouraging to know that you are abiding to the laws of the country of which you are in when viewing this website.</p>
+<p>In other words, if you are not of legal drinking age (21 in the US), you should leave now.</p>
+<div class="close-modal"><button>ENTER</button></div>
+</div>
+
+</body>
+</html>
