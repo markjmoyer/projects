@@ -29,7 +29,6 @@ Following are dependencies and packages used in developing this website:
   mad reputation.
 * [Stack Exchange](https://craftcms.stackexchange.com/)
 
-
 #### Setting Up A Development Environment
 MAMP was used to set this project up to run and test it locally. Run anyway you want. My
 IDE of choice is ATOM but again, use whatever you want and drive it within your own capabilities.
@@ -67,8 +66,6 @@ distribution that you are using:
     $> grep -i 'DocumentRoot' /etc/httpd/conf/httpd.conf # RHEL/RedHat/Fedora/CentOS
     $> grep -i 'DocumentRoot' /usr/local/etc/apache22/httpd.conf # FreeBSD
     $> grep -i 'DocumentRoot' httpd.conf # Other distributions
-
-&nbsp;
 
 ### Website Structure
 
