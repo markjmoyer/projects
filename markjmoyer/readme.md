@@ -15,8 +15,28 @@ Following are dependencies and packages used in developing this website:
 
 &nbsp;
 
+### CRAFT CMS
+
+## Documentation
+* -----------------------------------------------------------------
+* Installation instructions and much more.
+* [Craft CMS](https://craftcms.com/docs)
+
+## Changelog
+-----------------------------------------------------------------
+* Release notes with bug fixes, improvements and additions.
+* [Changelog](https://craftcms.com/changelog)
+
+## Stack Exchange
+* -----------------------------------------------------------------
+* A great place to ask your Craft questions, meet the awesome Craft community and earn
+  mad reputation.
+* [Stack Exchange](https://craftcms.stackexchange.com/)
+
+
 ## Setting Up A Development Environment
-MAMP was used to set this project up to run and test it locally. Run anyway you want.
+MAMP was used to set this project up to run and test it locally. Run anyway you want. My
+IDE of choice is ATOM but again, use whatever you want and drive it within your own capabilities.
 
 ### Installing Git
 Visit the [Git](http://git-scm.com/downloads) downloads page and select the installer
@@ -56,6 +76,11 @@ distribution that you are using:
 
 ## Website Structure
 
+### TWIG TEMPLATE ENGINE
+This project relies on the Twig templating Engine and the files you will work on are
+located in __/craft/templates, with exception to your __/assets/__ folder which is located
+in __/public/__
+
 ### Assets
 Website resources such as images, stylesheets, JavaScripts, etc. are all located in
 the Assets directory in the root of the project. Within the Assets directory, you
@@ -74,10 +99,6 @@ its behavior or purpose.
 
 #### Images
 Nothing special about images in this website.
-
-### TWIG TEMPLATES
-This project relies on the Twig templating engine and the files you will work on are
-located in craft/templates...
 
 ## Deploying Code
 /public/ is the root of this website and the contents of it can be removed from the
