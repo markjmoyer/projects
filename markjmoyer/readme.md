@@ -33,27 +33,16 @@ web root, open a command-line terminal and enter the following command:
     $> cd <YOUR_WEB_ROOT>
     $> git clone https://github.com/markjmoyer/projects/markjmoyer.git
 
-### Installing Bower
-To install Bower, open a command-line terminal and run the command
-`npm install -g bower`. Bower is used to manage packages and dependencies for building
-websites. Bower-enabled packages exist for things like Bootstrap, jQuery, AngularJS,
-Backbone.js, Require.js, etc. Bower makes it easy to keep these resources up-to-date
-and separated from your custom code.
-
-    $> npm install -g bower
-
 ### Finishing Your install
-Once you have installed Node, Grunt and Bower, you're ready to initialize your project
-by running "npm install" from the command line inside your target directory.
-
-    $> npm install
+Grunt, Bower and NPM are not being employed at this time. However, as the project
+grows this will undoubtedly change and more info will be added here.
 
 ### Viewing Your Local Website
 Assuming you have setup a local web server, and assuming that you have cloned the
 source code for this project into your web root, you should be able to access the
 website at:
 
-* [http://localhost:8888/dist/index.html)
+* (http://localhost:8888/dist/index.html)
 
 #### Finding Your Web Root in Unix/Linux
 Open a command-line terminal and enter one of the following commands based on the
@@ -92,8 +81,6 @@ This project relies on the Twig templating engine and the files you will work on
 located in craft/templates...
 
 ## Deploying Code
-
-Once Grunt has completed, you should test and ultimately deploy your code from the
-__/dist/__ directory, as this is the "distribution" version of the website. Issuing a
-Pull Request and merging that code will result in the final "dist" directory being deployed
- to the target server.
+/public/ is the root of this website and the contents of it can be removed from the
+and placed at the same level. However, and for the sake of brevity, deploy this
+project as is.
