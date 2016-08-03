@@ -1,6 +1,5 @@
-Leo Gecko Blog: Initial Setup w/Craft CMS
 
-## LEOGECKO - [www.no-site-registered]()
+## LEO GECKO BLOG WEBSITE - [www.no-site-registered]()
 
 ### Project Dependencies
 
