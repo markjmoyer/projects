@@ -2,15 +2,24 @@ $(document).ready(function() {
     entryModal.init();
     mainNav.init();
   scrollTop.init();
+  ageVerify.init()
 
 });
+
+var ageVerify = {
+	init: function () {
+
+
+
+  }
+}
 
 
 var entryModal = {
 	init: function () {
-
+    $(".ageVerifyModal, .overlay").hide();
     $(".ageVerifyModal button").on("click", function () {
-      $(".ageVerifyModal, .overlay").hide();
+      //$(".ageVerifyModal, .overlay").hide();
     });
 
   }
