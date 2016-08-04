@@ -14,8 +14,13 @@ header {
     float: left;
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 360px;
-  //  height: 100px;
+    padding-left: 20px;
+    margin-top: 10px;
+    width: 320px;
+
+    a {
+      display: block;
+    }
 
   img {
     width: 100%;

@@ -2692,7 +2692,8 @@ header a {
   background-image: url("../../assets/images/patternBG20.png");
   background-position: 0 -2px;
   background-repeat: repeat;
-  background-color: #788431; }
+  background-color: #788431;
+  border-bottom: 1px solid #000; }
 
 .mainMenu nav ul {
   margin: 0;
@@ -2821,7 +2822,11 @@ header {
     float: left;
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 360px; }
+    padding-left: 20px;
+    margin-top: 10px;
+    width: 320px; }
+    header .logo a {
+      display: block; }
     header .logo img {
       width: 100%; }
   header .headerNav {
