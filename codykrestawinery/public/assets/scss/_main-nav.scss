@@ -21,13 +21,11 @@
   background-position: 0 -2px;
   background-repeat: repeat;
   background-color: #8c9b3a;
-  //border-radius: 0 0 4px 4px;
   box-shadow: inset 0px 0px 80px -30px #000;
 }
 
 .mainMenu nav ul li:hover {
-  background-image: none;
-  box-shadow: none;
+  box-shadow: inset 0px 0px 80px -30px #ddd;
 }
 
 .mainMenu nav ul li a span {

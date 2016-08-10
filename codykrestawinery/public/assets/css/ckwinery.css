@@ -2581,11 +2581,10 @@ body {
     margin-top: 20px;
     width: 810px; }
   .content article {
-    border-right: 3px solid #fff;
     float: left;
     margin: 10px 25px 0 0;
     padding: 0 20px 0 0;
-    width: 69%; }
+    width: 100%; }
     .content article h1 {
       margin-bottom: 22px;
       margin-top: 12px; }
@@ -2711,8 +2710,7 @@ header a {
   box-shadow: inset 0px 0px 80px -30px #000; }
 
 .mainMenu nav ul li:hover {
-  background-image: none;
-  box-shadow: none; }
+  box-shadow: inset 0px 0px 80px -30px #ddd; }
 
 .mainMenu nav ul li a span {
   background-image: url("../../assets/images/iconsprite.png");
@@ -2897,8 +2895,6 @@ header {
   .hero-wrapper figure.sub-hero {
     float: left;
     height: 200px; }
-    .hero-wrapper figure.sub-hero img {
-      border: 1px solid #fff; }
     .hero-wrapper figure.sub-hero figcaption {
       font-family: "Arial";
       font-size: 18px;
